@@ -1,0 +1,58 @@
+
+<div *ngIf="status">
+<h1 class="text-primary">madhuri</h1>
+<h1>{{adr}}</h1></div>
+<h2>{{stdt}}</h2>
+<div *ngIf="status">
+<ul *ngFor="let s of stdt">
+   <li>{{s}}</li> 
+</ul>
+</div>
+<ol *ngFor="let e of emp">
+
+<li>{{e.nm}}-course{{e.cr}}</li>
+
+</ol>
+
+<h1 class="text-uppercase text-center text-danger">cafemenu</h1>
+<div class="row">
+<div class="col-md-3 col-sm-4 col-6" *ngFor="let m of cafemenu">
+<div class="p-3 shadow bg-white m-3">
+<ol>
+<li>menu name={{m.nm}}</li>
+<li>menu price-{{m.pr}}</li>
+<li> category-{{m.category}}</li>
+</ol>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="col-md-4 mx-auto mt-3">
+<table class="table table-bordered" border="1px" width="80%">
+<thead>
+   <tr class="text-center text-danger" >
+<th>menu name</th>
+<th>menu price</th>
+<th>category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="text-center" *ngFor="let m of cafemenu">
+<td>{{m.nm}}</td>
+<td>{{m.pr}}Rs/-</td>
+<td>{{m.category}}</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
